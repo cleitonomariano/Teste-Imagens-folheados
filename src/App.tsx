@@ -1,8 +1,12 @@
 import React from 'react';
 
+import Cadastro from './Pages/Cadastro/cadastro';
+import GlobalStyle from './styles/global';
+
 const App: React.FC = () => (
   <>
-    <h1>Hello World</h1>
+    <Cadastro />
+    <GlobalStyle />
   </>
 );
 
