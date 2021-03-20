@@ -2,6 +2,7 @@
 import React from 'react';
 
 import { Container, Content } from './styles';
+import Button from '../../Components/Button';
 
 const Register: React.FC = () => (
   <>
@@ -24,8 +25,12 @@ const Register: React.FC = () => (
           <input type="number" />
           <label>valor de venda</label>
           <input type="number" />
-          <button type="submit">Cadastrar</button>
-          <button type="submit">Cancelar</button>
+          <div className="buttonDiv">
+            <Button className="cancelar" type="submit">
+              Cancelar
+            </Button>
+            <Button type="submit">Cadastrar</Button>
+          </div>
         </form>
       </Content>
     </Container>
