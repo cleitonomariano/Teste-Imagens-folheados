@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
   height: 100vh;
@@ -31,5 +32,17 @@ export const Content = styled.div`
     font-size: 12px;
     text-align: left;
     overflow: hidden;
+  }
+  .buttonDiv {
+    display: flex;
+    gap: 8px;
+    .cancelar {
+      background: ${shade(0.3, '#008396')};
+      color: #fff;
+      border: 1px solid #970808;
+      &:hover {
+        background: #008396;
+      }
+    }
   }
 `;
