@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Cadastro from './Pages/Cadastro/cadastro';
+import Register from './Pages/Register/Register';
 import GlobalStyle from './styles/global';
 
 const App: React.FC = () => (
   <>
-    <Cadastro />
+    <Register />
     <GlobalStyle />
   </>
 );
