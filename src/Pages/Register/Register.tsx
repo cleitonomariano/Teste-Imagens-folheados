@@ -1,30 +1,30 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-
+import Field from '../../Components/Field';
 import { Container, Content } from './styles';
 import Button from '../../Components/Button';
+import Grid from '../../Components/Grid';
 
 const Register: React.FC = () => (
   <>
     <Container>
       <h3>Cadastrar produtos</h3>
-
       <Content>
         <form>
-          <label>Código de barra</label>
-          <input type="text" />
-          <label>Nome</label>
-          <input type="text" />
-          <label>Descrição</label>
-          <input type="text" />
-          <label>Estoque min</label>
-          <input type="number" />
-          <label>Estoque max</label>
-          <input type="number" />
-          <label>Custo</label>
-          <input type="number" />
-          <label>valor de venda</label>
-          <input type="number" />
+          <Grid>
+            <Field label="Código de barra" name="barcode" type="text" />
+            <Field label="Nome" name="name" type="text" />
+            <Field
+              label="Descrição"
+              className="descriptionField"
+              name="description"
+              type="text"
+            />
+            <Field label="Estoque min" name="inventoryMin" type="number" />
+            <Field label="Estoque max" name="inventoryMax" type="number" />
+            <Field label="Custo" name="cost" type="number" />
+            <Field label="valor de venda" name="salePrice" type="number" />
+          </Grid>
           <div className="buttonDiv">
             <Button className="cancelar" type="submit">
               Cancelar
