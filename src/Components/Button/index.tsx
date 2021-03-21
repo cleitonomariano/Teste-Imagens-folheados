@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
+import { ButtonHTMLAttributes } from 'react';
 
-const Button = styled.button`
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+const Button: React.FC<ButtonProps> = styled.button`
   width: 25%;
   height: 30px;
   border: 1px solid #008396;

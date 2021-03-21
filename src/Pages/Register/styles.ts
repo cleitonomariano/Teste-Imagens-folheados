@@ -2,38 +2,21 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 export const Container = styled.div`
-  height: 100vh;
-  width: 94%;
   background: #fff;
   padding: 10px;
-  padding-top: 20px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #008396;
 `;
 export const Content = styled.div`
-  width: 60%;
-  height: 100%;
+  text-align: left;
   background: #ebebeb;
   padding: 10px;
   margin-top: 30px;
   border-radius: 5px;
   border: 1px solid #008396;
-  form {
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 10px;
-    gap: 2px;
-    font-size: 12px;
-    text-align: left;
-    overflow: hidden;
-  }
+
   .buttonDiv {
+    margin-top: 10px;
     display: flex;
     gap: 8px;
     .cancelar {
