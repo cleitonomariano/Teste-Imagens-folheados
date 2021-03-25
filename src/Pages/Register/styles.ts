@@ -25,6 +25,7 @@ export const Content = styled.div`
       border: 1px solid #970808;
       &:hover {
         background: #008396;
+        color: red;
       }
     }
   }

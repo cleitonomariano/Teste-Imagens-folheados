@@ -1,15 +1,22 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
+interface FieldProps {
+  isErrored?: boolean;
+}
 export const FieldContainer = styled.div``;
 
-export const FieldElement = styled.input`
+export const FieldElement = styled.input<FieldProps>`
   border: 1px solid #339bab;
   background: #ffffff;
   border-radius: 4px;
   padding: 5px;
-  /* .descriptionField {
-    width: 700px;
-  } */
+  height: 25px;
+  ${props =>
+    props.isErrored &&
+    css`
+      border-color: #c53030;
+      background: #ffcbdb;
+    `}
 `;
 
 export const FieldLabel = styled.label`
