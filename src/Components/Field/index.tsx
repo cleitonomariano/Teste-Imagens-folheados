@@ -1,5 +1,6 @@
 import React, { InputHTMLAttributes, useEffect, useRef } from 'react';
 import { useField } from '@unform/core';
+// import { FiAlertCircle } from 'react-icons/fi';
 import { FieldElement, FieldContainer, FieldLabel } from './styles';
 
 interface FieldProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -27,7 +28,7 @@ const Field: React.FC<FieldProps> = ({ name, label, ...rest }) => {
         ref={inputRef}
         {...rest}
       />
-      {error}
+      {error && <span />}
     </FieldContainer>
   );
 };

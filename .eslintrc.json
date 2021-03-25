@@ -30,6 +30,7 @@
   "rules": {
     "no-console": "off",
     "no-alert": "off",
+    "no-restricted-globals":"off",
     "no-unused-expressions": "off",
     "react-hooks/rules-of-hooks": "error",
     "react/jsx-props-no-spreading": "off",

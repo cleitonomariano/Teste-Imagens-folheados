@@ -9,6 +9,7 @@ import { Container, Content } from './styles';
 import Button from '../../Components/Button';
 import Grid from '../../Components/Grid';
 import getValidationErrors from '../../Utils/getValidationErrors';
+import api from '../../Services/api';
 
 const Register: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
@@ -31,6 +32,7 @@ const Register: React.FC = () => {
       await schema.validate(data, {
         abortEarly: false,
       });
+      await api.post('/produto', data);
     } catch (err) {
       const erros = getValidationErrors(err);
       formRef.current?.setErrors(erros);
@@ -48,18 +50,48 @@ const Register: React.FC = () => {
             initialData={{ inventoryMin: 1, inventoryMax: 10000 }}
           >
             <Grid>
-              <Field label="Código de barra" name="barcode" type="text" />
-              <Field label="Nome" name="name" type="text" />
+              <Field
+                label="Código de barra"
+                name="barcode"
+                type="text"
+                placeholder="Digite o código de barras"
+              />
+              <Field
+                label="Nome"
+                name="name"
+                type="text"
+                placeholder="Digite o nome do produto"
+              />
               <Field
                 label="Descrição"
-                className="descriptionField"
                 name="description"
                 type="text"
+                placeholder="Descrição do produto"
               />
-              <Field label="Estoque min" name="inventoryMin" type="number" />
-              <Field label="Estoque max" name="inventoryMax" type="number" />
-              <Field label="Custo" name="cost" type="number" />
-              <Field label="valor de venda" name="salePrice" type="number" />
+              <Field
+                label="Estoque min"
+                name="inventoryMin"
+                type="number"
+                placeholder="Inventório mínimo"
+              />
+              <Field
+                label="Estoque max"
+                name="inventoryMax"
+                type="number"
+                placeholder="Invetório máximo"
+              />
+              <Field
+                label="Custo"
+                name="cost"
+                type="number"
+                placeholder="Valor de custo"
+              />
+              <Field
+                label="Valor de venda"
+                name="salePrice"
+                type="number"
+                placeholder="Valor de venda"
+              />
             </Grid>
             <div className="buttonDiv">
               <Button className="cancelar" type="submit">
