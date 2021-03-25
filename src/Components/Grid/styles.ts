@@ -5,9 +5,4 @@ export const GridElement = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   max-width: 100%;
-  @media (min-width: 400px) {
-    div {
-      grid-template-columns: 1fr;
-    }
-  }
 `;
